@@ -1,5 +1,6 @@
 import { Tabs } from 'expo-router';
-import { COLORS, Icons } from '../../constants';
+import Icon from '../../components/Icon';
+import { COLORS } from '../../constants';
 
 export default function TabLayout() {
   return (
@@ -27,28 +28,28 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Inicio',
-          tabBarIcon: ({ color }) => <span style={{ fontSize: 24 }}>{Icons.home}</span>,
+          tabBarIcon: ({ color }) => <Icon name="home" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
         name="explore"
         options={{
           title: 'Explorar',
-          tabBarIcon: ({ color }) => <span style={{ fontSize: 24 }}>{Icons.explore}</span>,
+          tabBarIcon: ({ color }) => <Icon name="search" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
         name="reservas"
         options={{
           title: 'Reservas',
-          tabBarIcon: ({ color }) => <span style={{ fontSize: 24 }}>{Icons.calendar}</span>,
+          tabBarIcon: ({ color }) => <Icon name="calendar" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
           title: 'Perfil',
-          tabBarIcon: ({ color }) => <span style={{ fontSize: 24 }}>{Icons.profile}</span>,
+          tabBarIcon: ({ color }) => <Icon name="user" size={24} color={color} />,
         }}
       />
     </Tabs>

@@ -57,7 +57,7 @@ export default function ReservasScreen() {
           <Text style={styles.historyDates}>{booking.dates}</Text>
           <View style={styles.ratingContainer}>
             {[...Array(booking.rating)].map((_, i) => (
-              <Text key={i} style={styles.ratingStar}>{Icons.star}</Text>
+              <Icons.star key={i} size={16} color={COLORS.primary} style={styles.ratingStar} />
             ))}
           </View>
         </Card>
@@ -91,7 +91,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   ratingStar: {
-    fontSize: 16,
     marginRight: 2,
   },
 });

@@ -16,7 +16,7 @@ export default function ExplorarScreen() {
       title: 'Clase de Yoga al Amanecer',
       description: 'Relájate frente al mar',
       price: '$25',
-      image: Icons.yoga,
+      image: Icons.activity,
     },
     {
       title: 'Tour Gastronómico',
@@ -27,7 +27,7 @@ export default function ExplorarScreen() {
   ];
 
   const places = [
-    { name: 'Playa Paraíso', distance: '500m', icon: Icons.island },
+    { name: 'Playa Paraíso', distance: '500m', icon: Icons.beach },
     { name: 'Centro Comercial', distance: '2km', icon: Icons.shopping },
     { name: 'Parque Nacional', distance: '5km', icon: Icons.nature },
   ];
@@ -55,12 +55,17 @@ export default function ExplorarScreen() {
       
       {places.map((place, index) => (
         <Card key={index} style={styles.placeCard}>
-          <Text style={styles.placeIcon}>{place.icon}</Text>
+          <View style={styles.placeIcon}>
+            {place.icon && <place.icon size={32} color={COLORS.primary} />}
+          </View>
           <View style={styles.placeContent}>
             <Text style={styles.placeName}>{place.name}</Text>
-            <Text style={styles.placeDistance}>{Icons.location} {place.distance}</Text>
+            <View style={styles.distanceContainer}>
+              <Icons.location size={16} color={COLORS.textSecondary} />
+              <Text style={styles.placeDistance}>{place.distance}</Text>
+            </View>
           </View>
-          <Text style={styles.placeArrow}>{Icons.arrow}</Text>
+          <Icons.arrowRight size={20} color={COLORS.textLight} />
         </Card>
       ))}
     </ScrollView>
@@ -77,8 +82,11 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   placeIcon: {
-    fontSize: 32,
+    width: 32,
+    height: 32,
     marginRight: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   placeContent: {
     flex: 1,
@@ -89,12 +97,13 @@ const styles = StyleSheet.create({
     color: COLORS.textPrimary,
     marginBottom: 4,
   },
+  distanceContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
   placeDistance: {
     fontSize: FONT_SIZES.regular,
     color: COLORS.textSecondary,
-  },
-  placeArrow: {
-    fontSize: 20,
-    color: COLORS.textLight,
   },
 });

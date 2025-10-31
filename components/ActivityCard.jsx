@@ -1,11 +1,12 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import Card from './Card';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLORS, FONT_SIZES } from '../constants';
+import Card from './Card';
 
-const ActivityCard = ({ title, description, price, image }) => (
+const ActivityCard = ({ title, description, price, image: IconComponent }) => (
   <Card style={styles.activityCard}>
-    <Text style={styles.activityImage}>{image}</Text>
+    <View style={styles.activityImage}>
+      <IconComponent size={60} color={COLORS.primary} />
+    </View>
     <View style={styles.activityContent}>
       <Text style={styles.activityTitle}>{title}</Text>
       <Text style={styles.activityDescription}>{description}</Text>
@@ -25,8 +26,11 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   activityImage: {
-    fontSize: 60,
+    width: 60,
+    height: 60,
     marginRight: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   activityContent: {
     flex: 1,

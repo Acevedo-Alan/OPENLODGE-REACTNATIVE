@@ -1,24 +1,32 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import Card from './Card';
-import { Icons } from '../constants/icons';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLORS, FONT_SIZES } from '../constants';
+import Card from './Card';
+import Icon from './Icon';
 
 const BookingCard = ({ room, dates, status, statusColor, location }) => (
   <Card style={styles.bookingCard}>
     <View style={styles.bookingHeader}>
       <Text style={styles.bookingRoom}>{room}</Text>
       <View style={[styles.statusBadge, { backgroundColor: statusColor }]}>
+        <Icon name="check" size={12} color={COLORS.white} style={styles.statusIcon} />
         <Text style={styles.statusText}>{status}</Text>
       </View>
     </View>
-    <Text style={styles.bookingDates}>{Icons.calendar} {dates}</Text>
-    <Text style={styles.bookingLocation}>{Icons.location} {location}</Text>
+    <View style={styles.bookingInfo}>
+      <Icon name="calendar" size={16} color={COLORS.textSecondary} />
+      <Text style={styles.bookingDates}>{dates}</Text>
+    </View>
+    <View style={styles.bookingInfo}>
+      <Icon name="location" size={16} color={COLORS.textSecondary} />
+      <Text style={styles.bookingLocation}>{location}</Text>
+    </View>
     <View style={styles.bookingActions}>
       <TouchableOpacity style={styles.actionButton}>
+        <Icon name="search" size={16} color={COLORS.white} />
         <Text style={styles.actionButtonText}>Ver Detalles</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.actionButtonSecondary}>
+        <Icon name="settings" size={16} color={COLORS.textSecondary} />
         <Text style={styles.actionButtonSecondaryText}>Modificar</Text>
       </TouchableOpacity>
     </View>
@@ -28,6 +36,12 @@ const BookingCard = ({ room, dates, status, statusColor, location }) => (
 const styles = StyleSheet.create({
   bookingCard: {
     marginBottom: 15,
+  },
+  bookingInfo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    marginBottom: 6,
   },
   bookingHeader: {
     flexDirection: 'row',

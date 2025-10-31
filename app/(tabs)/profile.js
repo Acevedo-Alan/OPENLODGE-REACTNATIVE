@@ -6,8 +6,8 @@ import { commonStyles } from '../../styles/commonStyles';
 
 export default function ProfileScreen() {
   const menuItems = [
-    { title: 'Información Personal', icon: Icons.profile },
-    { title: 'Métodos de Pago', icon: Icons.card },
+    { title: 'Información Personal', icon: Icons.user },
+    { title: 'Métodos de Pago', icon: Icons.creditCard },
     { title: 'Preferencias', icon: Icons.settings },
     { title: 'Notificaciones', icon: Icons.notification },
   ];
@@ -45,9 +45,11 @@ export default function ProfileScreen() {
       
       {menuItems.map((item, index) => (
         <Card key={index} style={styles.menuItem}>
-          <Text style={styles.menuIcon}>{item.icon}</Text>
+          <View style={styles.menuIconContainer}>
+            {item.icon && <item.icon size={24} color={COLORS.primary} />}
+          </View>
           <Text style={styles.menuTitle}>{item.title}</Text>
-          <Text style={styles.menuArrow}>{Icons.arrow}</Text>
+          <Icons.arrowRight size={20} color={COLORS.textLight} />
         </Card>
       ))}
 
@@ -123,19 +125,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  menuIcon: {
-    fontSize: 24,
+  menuIconContainer: {
+    width: 24,
+    height: 24,
     marginRight: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   menuTitle: {
     flex: 1,
     fontSize: FONT_SIZES.large,
     fontWeight: '500',
     color: COLORS.textPrimary,
-  },
-  menuArrow: {
-    fontSize: 18,
-    color: COLORS.textLight,
   },
   logoutButton: {
     margin: 20,

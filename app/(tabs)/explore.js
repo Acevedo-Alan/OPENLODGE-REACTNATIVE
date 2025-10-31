@@ -1,9 +1,8 @@
-import React from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
-import { commonStyles } from '../../src/styles/commonStyles';
-import Card from '../../src/components/Card';
-import ActivityCard from '../../src/components/ActivityCard';
-import { Icons, COLORS, FONT_SIZES } from '../../src/constants';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import ActivityCard from '../../components/ActivityCard';
+import Card from '../../components/Card';
+import { COLORS, FONT_SIZES, Icons } from '../../constants';
+import { commonStyles } from '../../styles/commonStyles';
 
 export default function ExplorarScreen() {
   const activities = [

@@ -1,6 +1,4 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import AppNavigator from './screens/AppNavigator';
+import { useState } from 'react';
 
 export  const App = () => {
   const [activeTab, setActiveTab] = useState('home');
@@ -465,6 +463,22 @@ const styles = StyleSheet.create({
   tabLabelActive: {
     color: '#00b894',
     fontWeight: '600',
+  },
+  title: {
+    fontFamily: FONTS.titleBold,  // Poppins Bold
+    fontSize: FONT_SIZES.title,
+  },
+  bodyText: {
+    fontFamily: FONTS.regular,    // Inter Regular
+    fontSize: FONT_SIZES.regular,
+  },
+  subtitle: {
+    fontFamily: FONTS.medium,     // Inter Medium
+    fontSize: FONT_SIZES.medium,
+  },
+  button: {
+    fontFamily: FONTS.semibold,   // Inter SemiBold
+    fontSize: FONT_SIZES.regular,
   },
 });
 

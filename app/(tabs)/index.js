@@ -1,11 +1,10 @@
-import React from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
-import { commonStyles } from '../../src/styles/commonStyles';
-import Card from '../../src/components/Card';
-import GradientButton from '../../src/components/GradientButton';
-import ServiceCard from '../../src/components/ServiceCard';
-import PromoCard from '../../src/components/PromoCard';
-import { COLORS, FONT_SIZES, FONTS } from '../../src/constants';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import Card from '../../components/Card';
+import GradientButton from '../../components/GradientButton';
+import PromoCard from '../../components/PromoCard';
+import ServiceCard from '../../components/ServiceCard';
+import { COLORS, FONT_SIZES, FONTS } from '../../constants';
+import { commonStyles } from '../../styles/commonStyles';
 
 export default function HomeScreen() {
   const services = [

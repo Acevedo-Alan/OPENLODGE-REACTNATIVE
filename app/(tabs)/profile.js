@@ -1,9 +1,8 @@
-import React from 'react';
-import { View, Text, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
-import { commonStyles } from '../../src/styles/commonStyles';
-import Card from '../../src/components/Card';
-import GradientButton from '../../src/components/GradientButton';
-import { Icons, COLORS, FONT_SIZES, FONTS } from '../../src/constants';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import Card from '../../components/Card';
+import GradientButton from '../../components/GradientButton';
+import { COLORS, FONT_SIZES, FONTS, Icons } from '../../constants';
+import { commonStyles } from '../../styles/commonStyles';
 
 export default function ProfileScreen() {
   const menuItems = [

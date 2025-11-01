@@ -77,7 +77,7 @@ export default function ProfileScreen() {
   const handleLogout = () => {
     // Add your logout logic here
     // Example: clear auth tokens, reset state, etc.
-    router.replace('/login');
+    router.replace('/auth');
   };
 
   // Render avatar based on whether we have an image URL or need to show initials

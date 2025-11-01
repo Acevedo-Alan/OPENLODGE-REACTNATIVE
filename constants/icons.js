@@ -6,6 +6,8 @@ import {
   Camera,
   Check,
   CreditCard,
+  Eye,
+  EyeOff,
   Home,
   Mail,
   MapPin,
@@ -42,7 +44,9 @@ export const Icons = {
   mail: Mail,
   phone: Phone,
   mapPin: MapPin,
-  camera: Camera
+  camera: Camera,
+  eye: Eye,
+  eyeOff: EyeOff
 };
 
 export default Icons;

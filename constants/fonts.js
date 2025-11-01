@@ -1,6 +1,18 @@
+import { Platform } from 'react-native';
+
 export const FONTS = {
-  montserrat: 'Montserrat',
-  roboto: 'Roboto',
+  montserrat: Platform.select({
+    ios: 'System',
+    android: 'sans-serif',
+  }),
+  roboto: Platform.select({
+    ios: 'System',
+    android: 'sans-serif',
+  }),
+  regular: Platform.select({
+    ios: 'System',
+    android: 'sans-serif',
+  }),
 };
 
 export const FONT_SIZES = {

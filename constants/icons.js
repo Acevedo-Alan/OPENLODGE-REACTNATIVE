@@ -6,8 +6,10 @@ import {
   Check,
   CreditCard,
   Home,
+  Mail,
   MapPin,
   Palmtree,
+  Phone,
   Search,
   Settings,
   ShoppingBag,
@@ -36,6 +38,9 @@ export const Icons = {
   pool: Waves,
   shopping: ShoppingBag,
   nature: Trees,
+  mail: Mail,
+  phone: Phone,
+  mapPin: MapPin
 };
 
 export default Icons;

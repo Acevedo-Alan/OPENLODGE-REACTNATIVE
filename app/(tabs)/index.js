@@ -8,10 +8,10 @@ import { commonStyles } from '../../styles/commonStyles';
 
 export default function HomeScreen() {
   const services = [
-    { name: 'Spa & Wellness', icon: '💆' },
-    { name: 'Restaurante', icon: '🍽️' },
-    { name: 'Piscina', icon: '🏊' },
-    { name: 'Gimnasio', icon: '💪' },
+    { name: 'Spa & Wellness'},
+    { name: 'Restaurante'},
+    { name: 'Piscina'},
+    { name: 'Gimnasio'},
   ];
 
   const promos = [

@@ -3,6 +3,7 @@ import {
   ArrowRight,
   Bell,
   Calendar,
+  Camera,
   Check,
   CreditCard,
   Home,
@@ -40,7 +41,8 @@ export const Icons = {
   nature: Trees,
   mail: Mail,
   phone: Phone,
-  mapPin: MapPin
+  mapPin: MapPin,
+  camera: Camera
 };
 
 export default Icons;
